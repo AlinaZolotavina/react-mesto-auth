@@ -17,7 +17,7 @@ The interactive service that allows users to sign up, sign in, add photos and ca
 - authorization of user.
 
 
-[Project link on GitHub Pages](https://alinazolotavina.github.io/mesto-react/)
+[Project link on GitHub Pages](https://alinazolotavina.github.io/react-mesto-auth/)
 ## Technologies in use:
 - HTML5: semantic markup;
 - CSS3: Flexible Box Layout, Grid Layout, Backgrounds and Borders,  Colors, Fonts, Media queries;
@@ -44,7 +44,7 @@ The interactive service that allows users to sign up, sign in, add photos and ca
 - регистрация пользователя,
 - авторизация пользователя.
 
-[Ссылка на проект на GitHub Pages](https://alinazolotavina.github.io/mesto-react/)
+[Ссылка на проект на GitHub Pages](https://alinazolotavina.github.io/react-mesto-auth/)
 ## Использованные технологии:
 - HTML: семантическая верстка;
 - CSS: технология построения сетки Flex, технология построения сетки Grid Layout, фоны и границы, цвета, шрифты, медиазапросы;
