@@ -13,10 +13,8 @@ function Header({ userEmail, onLogout }) {
         <p className="header__user-email">{userEmail}</p>
         <Link
           to={
-            location.pathname === '/sign-up'
-            ? '/sign-in'
-            : location.pathname === '/sign-in'
-            ? '/sign-up'
+            location.pathname === '/sign-up' ? '/sign-in'
+            : location.pathname === '/sign-in' ? '/sign-up'
             : '/sign-in'
           }
           className="header__link"

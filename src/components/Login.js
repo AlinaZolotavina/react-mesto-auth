@@ -21,8 +21,8 @@ function Login({ onLogin }) {
     }
 
     return (
-        <form className="login__form" name="login-form" noValidate="" onSubmit={handleSubmit}>
-            <h2 className="login__form-title">Вход</h2>
+        <form className="login form" name="login-form" noValidate="" onSubmit={handleSubmit}>
+            <h2 className="login__title">Вход</h2>
             <label className="login__form-item" htmlFor="email">
                 <input
                     className="login__form-input login__form-input_type_email"

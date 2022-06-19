@@ -14,12 +14,14 @@ import Register from './Register';
 import Login from './Login';
 import api from '../utils/api';
 import * as auth from '../utils/auth.js';
+import InfoToolTip from './InfoToolTip';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
-  const history = useHistory();
   const [userEmail, setUserEmail] = useState('');
   const [ loggedIn, setLoggedIn ] = useState(false);
+
+  const history = useHistory();
 
   const [cards, setCards] = useState([]);
 
@@ -29,6 +31,8 @@ function App() {
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState({});
   const [isImagePopupOpen, setImagePopupOpen] = useState(false);
+  const [isInfoToolTipOpen, setInfoToolTipOpen] = useState(false);
+  const [isSuccess, setSuccess] = useState(false);
 
   const currentYear = new Date().getFullYear();
   
@@ -89,6 +93,7 @@ function App() {
     setDeleteCardPopupOpen(false);
     setEditAvatarPopupOpen(false);
     setImagePopupOpen(false);
+    setInfoToolTipOpen(false);
     setSelectedCard({});
   };
 
@@ -123,12 +128,16 @@ function App() {
     auth.register(email, password)
     .then((res) => {
       if(res) {
-        history.push('/sign-in')
-
-        console.log('registration')
+        setSuccess(true);
+        setInfoToolTipOpen(true);
+        history.push('/sign-in');
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      console.log(err);
+      setSuccess(false);
+      setInfoToolTipOpen(true);
+    });
 
   }
 
@@ -142,7 +151,11 @@ function App() {
         localStorage.setItem('jwt', data.token)
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      console.log(err);
+      setSuccess(false);
+      setInfoToolTipOpen(true);
+    });
   }
 
   function checkToken() {
@@ -198,7 +211,7 @@ function App() {
           </Route>   
 
           <Route>
-            {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-up"/>}
+            {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in"/>}
           </Route>
         </Switch>
 
@@ -235,7 +248,13 @@ function App() {
           card={selectedCard}
           isOpen={isImagePopupOpen}
           onClose={closeAllPopups}
-        />               
+        />
+
+        <InfoToolTip
+          isOpen={isInfoToolTipOpen}
+          isSuccess={isSuccess}
+          onClose={closeAllPopups}
+        />            
       </CurrentUserContext.Provider>
     </div>
   );

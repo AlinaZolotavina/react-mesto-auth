@@ -74,9 +74,14 @@
 @import url(./blocks/popup/__caption/popup__caption.css);
 
 /* login */
-@import url(./blocks/login/__form/login__form.css);
-@import url(./blocks/login/__form-title/login__form-title.css);
+@import url(./blocks/login/login.css);
+@import url(./blocks/login/__title/login__title.css);
 @import url(./blocks/login/__form-input/login__form-input.css);
 @import url(./blocks/login/__form-item/login__form-item.css);
 @import url(./blocks/login/__text/login__text.css);
 @import url(./blocks/login/__link/login__link.css);
+
+/* info tool tip*/
+@import url(./blocks/info-tool-tip/info-tool-tip.css);
+@import url(./blocks/info-tool-tip/__icon/info-tool-tip__icon.css);
+@import url(./blocks/info-tool-tip/__text/info-tool-tip__text.css);
