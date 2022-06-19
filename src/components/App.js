@@ -37,13 +37,15 @@ function App() {
   const currentYear = new Date().getFullYear();
   
   useEffect(() => {
-    api.getInitialData()
-    .then(data => {
+    if(loggedIn) {
+      api.getInitialData()
+      .then(data => {
       const [userData, cardsData] = data;
       setCurrentUser(userData);
       setCards(cardsData);
     })
     .catch((err) => console.log(err));
+    }
   },  [loggedIn]);
 
   useEffect(() => {
