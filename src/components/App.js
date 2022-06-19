@@ -44,11 +44,11 @@ function App() {
       setCards(cardsData);
     })
     .catch((err) => console.log(err));
-  },  []);
+  },  [loggedIn]);
 
   useEffect(() => {
     checkToken();
-  });
+  }, [history.location]);
 
   function handleEditProfilePopupOpen() {
     setEditProfilePopupOpen(!isEditProfilePopupOpen);
@@ -173,6 +173,7 @@ function App() {
     localStorage.removeItem('jwt');
     history.push('/sign-in');
     setLoggedIn(false);
+    setUserEmail('');
   }
 
   return (
@@ -254,6 +255,8 @@ function App() {
           isOpen={isInfoToolTipOpen}
           isSuccess={isSuccess}
           onClose={closeAllPopups}
+          textSuccess='Вы успешно зарегистрировались!'
+          textFail='Что-то пошло не так! Попробуйте еще раз'
         />            
       </CurrentUserContext.Provider>
     </div>
