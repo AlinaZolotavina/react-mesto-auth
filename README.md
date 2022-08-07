@@ -1,3 +1,4 @@
+![mesto sample](./src/images/mesto-sample.jpg)
 # Project: Mesto ![english](./src/images/english.png?raw=true?raw=true)
 ## About the project:
 The interactive service that allows users to sign up, sign in, add photos and captions to them, delete added photos, put likes, edit profile information, change the user's avatar.
@@ -17,12 +18,19 @@ The interactive service that allows users to sign up, sign in, add photos and ca
 - authorization of user.
 
 
-[Project link on GitHub Pages](https://alinazolotavina.github.io/react-mesto-auth/)
+[Project link on GitHub Pages](https://alinazolotavina.github.io/react-mesto-auth/npm run deploy)
 ## Technologies in use:
 - HTML5: semantic markup;
 - CSS3: Flexible Box Layout, Grid Layout, Backgrounds and Borders,  Colors, Fonts, Media queries;
 - Java Script: OOP, HTTP request methods, Promise.
 - React JS: function components, hooks (useState, useEffect, useRef, useContext), CurrentUserContext, react-router-dom.
+
+## Deployment Instructions:
+```
+git clone https://github.com/AlinaZolotavina/react-mesto-auth.git
+npm install
+npm start
+```
 
 ## Future scope:
 - Client-side form validation
@@ -50,6 +58,13 @@ The interactive service that allows users to sign up, sign in, add photos and ca
 - CSS: технология построения сетки Flex, технология построения сетки Grid Layout, фоны и границы, цвета, шрифты, медиазапросы;
 - Java Script: ООП, HTTP-запросы, промисы;
 - React JS: функциональные компоненты, хуки (useState, useEffect, useRef, useContext), CurrentUserContext, react-router-dom.
+
+## Инструкция по развертыванию проекта:
+```
+git clone https://github.com/AlinaZolotavina/react-mesto-auth.git
+npm install
+npm start
+```
 
 ## Планы по доработке проекта:
 - Валидация форм на стороне пользователя.
